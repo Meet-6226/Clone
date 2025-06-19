@@ -1,0 +1,367 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F2F6F8;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Sign_Up {
+    background-color: #F2F6F8;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.Sign_Up_Contianer {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 72%;
+    max-width: 1200px;
+    padding: 12px 0;
+    margin: 0 auto;
+}
+
+.Navigation > div{
+    white-space: nowrap;
+margin: 17px;
+}
+
+.Navigation__spacer {
+    flex-grow: 1;
+}
+
+.Navigation a{
+    text-decoration: none;
+    color: #5A6B7B;
+    font-size: 16px;
+}
+
+.Navigation a:hover{
+    color: #3077BD;
+}
+
+.Navigation__toggle i{
+font-size: 30px;
+}
+
+.Navigation__mobile{
+    animation: nav-open  0.3s ease;
+}
+
+.Sign_Up_GetStarted {
+    text-align: center;
+}
+
+.Sign_Up_GetStarted_Get {
+    color: #333;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
+    line-height: -0.5px;
+
+}
+
+.Sign_Up_GetStarted_Create {
+    color: #666;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    line-height: -0.5px;
+
+}
+
+.SIgn_Up_GetStarted_Credit {
+    color: #999;
+    font-size: 11px;
+    margin-bottom: 20px;
+}
+
+.Sign_Up_Form {
+    width: 23%;
+    height: 310px;
+    background-color: #FFFFFF;
+    justify-content: center;
+    display: block;
+    align-content: center;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+    border-radius: 2px;
+}
+
+.Sign_Up_Form_SignUp {
+    color: #333;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px 15px 15px;
+}
+
+#email {
+    background-color: #FFFFFF;
+    padding: 10px;
+    width: 90%;
+    height: 20px;
+    margin: 10px 0px;
+    border: 1px solid #c6d2d9;
+    border-radius: 2px;
+    color: #333;
+    background-clip: padding-box;
+    font-size: 14px;
+}
+
+input[type=text]:focus {
+    border: 1px solid #c6d2d9;
+}
+
+#password {
+    background-color: #FFFFFF;
+    padding: 10px;
+    width: 90%;
+    height: 20px;
+    margin: 10px 0px;
+    border: 1px solid #c6d2d9;
+    border-radius: 2px;
+    color: #333;
+    background-clip: padding-box;
+    font-size: 14px;
+}
+
+.Sign_Up_Terms {
+    padding: 0px 0px 0px 0px;
+    font-size: 14px;
+}
+
+#Sign_Up_Checkbox {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    height: 15px;
+    width: 20px;
+}
+
+.Sign_Up_Checkmark {
+    background-color: #eee;
+
+}
+
+.Sign_Up_Checkmark input:checked~.Sign_Up_Checkmark {
+    background-color: #03a9f4;
+}
+
+.Sign_Up_Terms a {
+    text-decoration: none;
+    color: #03a9f4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Sign_UP_Create_Button {
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #03a9f4;
+    padding: 12px 15px;
+    width: 95%;
+    border-radius: 2px;
+    border: none;
+    margin-top: 10px;
+}
+
+.Sign_UP_Create_Button:hover {
+    background-color: #3ebbff;
+}
+
+.Sign_Up_error {
+    display: none;
+}
+
+.underline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-right: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.underline div {
+    width: 42%;
+    height: 1px;
+    background-color: #999;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.Sign_Up_Google_Button {
+    width: 95%;
+    margin: 15px 0;
+}
+
+.Sign_Up_Google_Button:hover {
+    background-color: #f8f9fa;
+}
+
+.Sign_Up_Google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #3c4043;
+    background-color: white;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #c6d2d9;
+    border-radius: 4px;
+    padding: 10px 0;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.1);
+}
+
+.Sign_Up_Google:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3);
+}
+
+.Sign_Up_Google img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.Sign_Up_Google_Continue {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #3c4043;
+}
+
+.Sign_Up_Privacy {
+    text-align: center;
+    width: 25%;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Sign_Up_Privacy_img {
+    width: 4%;
+    height: 12px;
+    margin-top: 5px;
+    align-items: baseline;
+    justify-content: baseline;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Sign_Up_Privacy_Span {
+    font-size: 11px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Sign_Up_Privacy a {
+    text-decoration: none;
+    color: #03a9f4;
+    font-size: 11px;
+    margin: 0px 5px 1px 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .Sign_Up_Contianer {
+        min-width: 100%;
+        font-family: 'Roboto', sans-serif;
+        max-width: 100%;
+    }
+
+    .Sign_Up_GetStarted {
+        min-width: 50%;
+        max-width: 100%;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_Google {
+        min-width: 50%;
+        max-width: 100%;
+        height: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_Google_Continue {
+        font-size: 10px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_Login {
+        font-family: 'Roboto', sans-serif;
+        text-align: right;
+    }
+
+    .Sign_Up_Form {
+        min-width: 50%;
+        max-width: 100%;
+        font-family: 'Roboto', sans-serif;
+        height: 350px;
+    }
+
+    .Sign_Up_Google img {
+        width: 10%;
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 0px;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .Sign_Up_Contianer {
+        min-width: 100%;
+        max-width: 100%;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_GetStarted {
+        min-width: 50%;
+        max-width: 100%;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_Google {
+        min-width: 50%;
+        max-width: 100%;
+        height: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_Google_Continue {
+        font-size: 10px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_Login {
+        font-family: 'Roboto', sans-serif;
+        text-align: right;
+    }
+
+    .Sign_Up_Form {
+        min-width: 50%;
+        max-width: 100%;
+        height: 350px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .Sign_Up_Google img {
+        width: 10%;
+        font-family: 'Roboto', sans-serif;
+        height: 20px;
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Sign Up
+    </title>
+    <link rel="stylesheet" href="./Sign_Up.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="Sign_Up">
+    <div class="Sign_Up_Contianer">
+        <!-- Navbar -->
+        <div id="Navigation" class="Navigation">
+            <div>
+                <a href="../index.html"><img src="https://clockify.me/assets/images/clockify-logo.svg" alt="logo"></a>
+            </div>
+            <div class="Navigation__spacer"></div>
+            <div>
+                <a href="../log-in/log-in.html" class="Sign_Up_Login">Log In</a>
+            </div>
+        </div>
+        <!-- Get Sarted -->
+        <div class="Sign_Up_GetStarted">
+            <p class="Sign_Up_GetStarted_Get"> Get started with Clockify</p>
+            <p class="Sign_Up_GetStarted_Create"> Create a free account to start tracking time and supercharge your
+                productivity</p>
+            <p class="SIgn_Up_GetStarted_Credit"> No credit card required · Unsubscribe at any time</p>
+        </div>
+        <!--Sign Up Form -->
+        <div class="Sign_Up_Form">
+            <label class="Sign_Up_Form_SignUp"> Sign Up</label>
+            <input type="text" name="email" id="email" placeholder="Enter email" required />
+            <input type="password" name="password" id="password" placeholder="Choose password" required />
+
+            <!-- terms check box -->
+            <label class="Sign_Up_Terms">
+                <input type="Checkbox" class="Sign_Up_Checkbox" id="Sign_Up_Checkbox" required checked>
+                I agree to the
+                <span class="Sign_Up_Checkmark"></span>
+                <a href="#">Terms of Use</a>
+            </label>
+
+            <!-- create button -->
+            <a href="../timesheet/timesheet.html"><button type="button" class="Sign_UP_Create_Button" id="signup"> CREATE FREE ACCOUNT </button></a>
+            <h4 class="Sign_Up_error Sign_Up_error_msg" id="Sign_Up_error"> You must accept the terms of service </h4>
+            
+            <!-- google button -->
+            <div class="Sign_Up_Google_Button">
+                <a href="#" class="Sign_Up_Google">
+                    <img src="https://app.clockify.me/assets/ui-icons/icon-google.svg" alt="Google">
+                    <span class="Sign_Up_Google_Continue">Continue with Google </span> 
+                </a>
+            </div>
+        </div>
+        <!-- privacy -->
+        <div class="Sign_Up_Privacy">
+            <img src="https://e7.pngegg.com/pngimages/759/956/png-clipart-information-privacy-data-protection-directive-computer-icons-security-radiological-information-system-logo-data-thumbnail.png" alt="Privacy" class="Sign_Up_Privacy_img">
+            <span class="Sign_Up_Privacy_Span"> your data is safe with us : </span>
+            <a href=""> Security Privacy</a>
+        </div>
+    </div>
+</div>
+</body>
+<script src="./Sign_Up.js"></script>
+
+</html>

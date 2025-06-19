@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clockify - 100% Free Time Tracking Software</title>
+    <link rel="icon" href="https://clockify.me/assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/249783f98b.js" crossorigin="anonymous"></script>
+    <!-- SweetAlert2 CSS and JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./timetracker.css">
+    <link rel="stylesheet" href="../navigation/navigation.css">
+</head>
+
+<body>
+    <div class="product__navigation">
+        <div>
+            <i onclick="sidebarFeature()" class="fas fa-bars"></i>
+        </div>
+        <div>
+            <a href="../timesheet/timesheet.html"><img src="https://clockify.me/assets/images/clockify-logo.svg" alt="logo"></a>
+        </div>
+
+        <div class="product__navigation__spacer">
+            <div>
+                <div class="dropdown">
+                    <span class="dropbtn" id="workspace_password">Workspace </span>
+                    <div class="dropdown-content">
+                        <a href="#">Workspace</a>
+                        <a href="../settings/settings.html" id="workspace_email"> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <a href="../upgrade/upgrade.html"><button class="btn">upgrade</button></a>
+        </div>
+        <div>
+            <img src="https://app.clockify.me/assets/nav-icons/help.svg">
+        </div>
+        <div>
+            <img src="https://app.clockify.me/assets/nav-icons/notification.svg">
+        </div>
+        <div>
+            <div class="dropdown">
+                <span class="dropbtn"><i class="fas fa-user"></i> </span>
+                <div class="dropdown-content">
+                    <a href="#" id="profile_password"> </a>
+                    <a href="../settings/settings.html"> Profile Setting</a>
+                    <a href="../desktopapp/desktopapp.html"> Download</a>
+                    <a href="../home/index.html"> Logout </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="product__container">
+        <div id="product__container__sidebar" class="product__container__sidebar">
+            <div onclick="parent.location='../timesheet/timesheet.html'" title="Timesheet">
+                <img src="https://app.clockify.me/assets/nav-icons/timesheet.svg" alt="timesheet">
+                <span>Timesheet</span>
+            </div>
+            <div class="active" onclick="parent.location='../timetracker/timetracker.html'" title="Time Tracker">
+                <img src="https://app.clockify.me/assets/nav-icons/time-tracker.svg" alt="timetracker">
+                <span>Time Tracker</span>
+            </div>
+            <div onclick="parent.location='../calender/calender.html'" title="Calendar">
+                <img src="https://app.clockify.me/assets/nav-icons/calendar.svg" alt="calendar">
+                <span>Calendar</span>
+            </div>
+
+            <div id="product__analyze">
+                <p>Analyze</p>
+            </div>
+            <div onclick="parent.location='../dashboard/dashboard.html'" title="Dashboard">
+                <img src="https://app.clockify.me/assets/nav-icons/dashboard.svg" alt="dashboard">
+                <span>Dashboard</span>
+            </div>
+            <div id="product__manage">
+                <p>Manage</p>
+            </div>
+            <div onclick="parent.location='../teams/teams.html'" title="Team">
+                <img src="https://app.clockify.me/assets/nav-icons/teams.svg" alt="team">
+                <span>Team</span>
+            </div>
+            <div onclick="parent.location='../client/client.html'" title="Clients">
+                <img src="https://app.clockify.me/assets/nav-icons/clients.svg" alt="clients">
+                <span>Clients</span>
+            </div>
+            <div onclick="parent.location='../tags/tags.html'" title="Tags">
+                <img src="https://app.clockify.me/assets/nav-icons/tags.svg" alt="tags">
+                <span>Tags</span>
+            </div>
+            <div onclick="parent.location='../settings/settings.html'" title="Settings">
+                <img src="https://app.clockify.me/assets/ui-icons/settings-icon-bold.svg" alt="settings">
+                <span>Settings</span>
+            </div>
+
+            <div id="showMoreToggle" class="sidebar-item" onclick="toggleShowMore()">
+                <img src="https://app.clockify.me/assets/ui-icons/chevron-down.svg" alt="Show More">
+                <span>Show More</span>
+            </div>
+
+            <div id="showMoreContent" style="display: none;">
+                <div class="sidebar-item" onclick="parent.location=''" title="Kiosk">
+                    <img src="https://app.clockify.me/assets/nav-icons/kiosk.svg" alt="kiosk">
+                    <span>Kiosk</span>
+                </div>
+                <div class="sidebar-item" onclick="parent.location=''" title="Schedule">
+                    <img src="https://app.clockify.me/assets/nav-icons/scheduling.svg" alt="schedule">
+                    <span>Schedule</span>
+                </div>
+                <div class="sidebar-item" onclick="parent.location=''" title="Expenses">
+                    <img src="https://app.clockify.me/assets/nav-icons/expenses.svg" alt="expenses">
+                    <span>Expenses</span>
+                </div>
+                <div class="sidebar-item" onclick="parent.location=''" title="Time Off">
+                    <img src="https://app.clockify.me/assets/nav-icons/time-off-sidebar.svg" alt="timeoff">
+                    <span>Time Off</span>
+                </div>
+                <div class="sidebar-item" onclick="parent.location=''" title="Activity">
+                    <img src="https://app.clockify.me/assets/nav-icons/activity.svg" alt="activity">
+                    <span>Activity</span>
+                </div>
+                <div class="sidebar-item" onclick="parent.location=''" title="Approvals">
+                    <img src="https://app.clockify.me/assets/nav-icons/approvals.svg" alt="approvals">
+                    <span>Approvals</span>
+                </div>
+                <div class="sidebar-item" onclick="parent.location=''" title="Invoices">
+                    <img src="https://app.clockify.me/assets/nav-icons/invoices.svg" alt="invoices">
+                    <span>Invoices</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="product__container__content" class="product__container__content">
+            <div class="Timetracker">
+                <div class="Timetracker__navigation">
+                    <h2>Time Tracker</h2>
+                </div>
+
+                <div class="Timetracker__head">
+                    <div>
+                        <label>Project:</label>
+                        <input type="text" id="projectListInput" list="project__list" placeholder="Project Name" />
+                        <datalist id="project__list"></datalist>
+                    </div>
+
+                    <div>
+                        <label>Description:</label>
+                        <input class="Timetracker__description" id="Timetracker__description" placeholder="Enter description">
+                    </div>
+
+                    <div>
+                        <label>Day:</label>
+                        <input type="text" list="weekDays" id="weekDaysInput" placeholder="Day of week" />
+                        <datalist id="weekDays">
+                            <option value="Monday"></option>
+                            <option value="Tuesday"></option>
+                            <option value="Wednesday"></option>
+                            <option value="Thursday"></option>
+                            <option value="Friday"></option>
+                            <option value="Saturday"></option>
+                            <option value="Sunday"></option>
+                        </datalist>
+                    </div>
+
+                    <div>
+                        <label class="Timetracker__time" for="time__tracker">Time:</label>
+                        <h4 class="time__tracker" id="time__tracker">00:00:00</h4>
+                    </div>
+
+                    <div>
+                        <button id="time__start">Start</button>
+                    </div>
+                </div>
+
+                <div id="Timetracker__body" class="Timetracker__body"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../timetracker/timetracker.js"></script>
+    <script src="../navigation/navigation.js"></script>
+</body>
+</html>
